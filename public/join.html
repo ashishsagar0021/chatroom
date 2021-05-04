@@ -16,13 +16,31 @@
 	<body>
 		<div class="join-container">
 			<header class="join-header">
-				<h1><i class="fas fa-smile"></i> WeChat</h1>
+				<h1><i class="fas fa-smile"></i> Join Room</h1>
 			</header>
 			<main class="join-main">
-				<form >
-					<button type="submit" class="btn" formaction="create.html">Create Room</button>
-					<button type="submit" class="btn" formaction="join.html">Join Room</button>
-
+				<form action="chat.html">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="e.g. Andy Dufresne..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Secret Key</label>
+						<input
+							type="text"
+							name="room"
+							id="room"
+							placeholder="abc-def-ghi"
+							required
+						/>
+					</div>
+					<button type="submit" class="btn">Join Room</button>
 				</form>
 			</main>
 		</div>
