@@ -187,3 +187,14 @@ a {
 		display: none;
 	}
 }
+
+/* create page */
+
+#cpy_btn{
+	visibility: hidden;
+	position: relative;
+	left: 200px;
+}
+
+
+
