@@ -60,3 +60,22 @@ function cpy_btn1(){
     document.body.removeChild(aux);
 
 }
+var iframex =     document.getElementById("youtube-iframe");
+var link  = document.getElementById("youtube-link").value;
+
+document.getElementById("youtube-button").onclick = function() {
+    document.getElementById('youtube-iframe').src = "https://www.youtube.com/embed/bo2KQer1KNM";
+ };
+ 
+
+
+
+
+// refresh_button= document.querySelector("#");
+
+// refresh_button.addEventListener("click", function(){
+//     iframex.setAttribute("src",link);
+    
+//     console.log(link);
+//     // location.reload(true);
+// });
