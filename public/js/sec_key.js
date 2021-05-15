@@ -1,3 +1,5 @@
+
+
 function getRandomString() {
     var length = 9;
     var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -21,13 +23,23 @@ function generate_key(){
   
 }
 function done(){
-    var key2=document.getElementById("roomX").value;
-    console.log(key2);
-    if (key1==key2){
-        // alert("M");
+    var key2 = document.getElementById("roomX").value;
+    var uname = document.getElementById('uname').value;
+    
+    if (key1 == key2){
+        // alert("Musk");
 
-
+        this.db.ref('users/').child(uname).set({'username': uname});  
+        
+        // console.log(this.db.ref('users/' + uname).child(key2).set({'username': uname}));
         document.getElementById("form1").action = "chat.html";
+
+        // let userRef = this.db.ref('users/');
+        // userRef.child(
+        //     key2).set({'username': uname})
+
+          
+
         // console.log(document.getElementById("form1").action = "chat.html"
         // );
 
