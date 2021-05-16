@@ -47,6 +47,29 @@
   <script src="js/main.js"></script>
   <script src="js/sec_key.js"></script>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSXp8x0X4Bfa7gcOUvNiJZS_ik1omiMDE",
+    authDomain: "wetube-6362c.firebaseapp.com",
+    projectId: "wetube-6362c",
+    storageBucket: "wetube-6362c.appspot.com",
+    messagingSenderId: "509997407058",
+    appId: "1:509997407058:web:de045f741e8d756bf6f88b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
 </body>
 
 </html>
