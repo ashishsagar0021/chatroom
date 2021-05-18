@@ -1,3 +1,5 @@
+
+
 function getRandomString() {
     var length = 9;
     var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -17,17 +19,42 @@ function generate_key(){
 
     // console.log(document.getElementById("gen_key").innerHtml);
 
-  
-  
 }
-function done(){
-    var key2=document.getElementById("roomX").value;
-    console.log(key2);
-    if (key1==key2){
-        // alert("M");
 
+function done() {
+    var key2 = document.getElementById("roomX").value;
+    var uname = document.getElementById("uname").value;
+    
+    if (key1 == key2){
+        // alert("Musk");
 
+        // exports.hello = functions.database.ref('/hello').onWrite(event => {
+        //     // set() returns a promise. We keep the function alive by returning it.
+        //     return event.data.ref.set('world!').then(() => {
+        //       console.log('Write succeeded!');
+        //     });
+        //   });
+        let promise = new Promise(function(resolve, reject) {
+            resolve("done");
+            
+            db.collection('users').add({
+                username: "gruud",
+                roomID: "asnf",
+            }); 
+
+            reject(new Error("…")); // ignored
+            setTimeout(() => resolve("…")); // ignored
+          });
+        
+        // console.log(this.db.ref('users/' + uname).child(key2).set({'username': uname}));
         document.getElementById("form1").action = "chat.html";
+
+        // let userRef = this.db.ref('users/');
+        // userRef.child(
+        //     key2).set({'username': uname})
+
+          
+
         // console.log(document.getElementById("form1").action = "chat.html"
         // );
 
@@ -60,12 +87,12 @@ function cpy_btn1(){
     document.body.removeChild(aux);
 
 }
-var iframex =     document.getElementById("youtube-iframe");
-var link  = document.getElementById("youtube-link").value;
+// var iframex =     document.getElementById("youtube-iframe");
+// var link  = document.getElementById("youtube-link").value;
 
-document.getElementById("youtube-button").onclick = function() {
-    document.getElementById('youtube-iframe').src = "https://www.youtube.com/embed/bo2KQer1KNM";
- };
+// document.getElementById("youtube-button").onclick = function() {
+    // document.getElementById('youtube-iframe').src = "https://www.youtube.com/embed/bo2KQer1KNM";
+//  };
  
 
 
