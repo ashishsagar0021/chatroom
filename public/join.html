@@ -16,10 +16,10 @@
 	<body>
 		<div class="join-container">
 			<header class="join-header">
-				<h1><i class="fas fa-smile"></i> Join Room</h1>
+				<h1><i class='fas fa-users'></i> WeChat</h1>
 			</header>
 			<main class="join-main">
-				<form action="chat.html">
+				<form class="joinForm" id="form2">
 					<div class="form-control">
 						<label for="username">Username</label>
 						<input
@@ -29,20 +29,47 @@
 							placeholder="Andy Dufresne"
 							required
 						/>
-					</div>
-					<div class="form-control">
-						<label for="room">Secret Key</label>
+                    </div>
+                    <div class="form-control">
+						<label for="roomID">roomID</label>
 						<input
 							type="text"
 							name="room"
 							id="room"
-							placeholder="e.g. abc-def-ghi"
+							placeholder="abc-def-ghi"
 							required
 						/>
 					</div>
-					<button type="submit" class="btn">Join Room</button>
+					<div class="form-control">
+                        <button type="submit" class="btn" id="dbBtn2">Register Yourself</button>
+                    </div>
+                    <div class="form-control">
+                        <button type="submit" class="btn" id="joinBtn" onclick=go2()>Join Chat</button>
+                    </div>
 				</form>
 			</main>
 		</div>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBSXp8x0X4Bfa7gcOUvNiJZS_ik1omiMDE",
+                authDomain: "wetube-6362c.firebaseapp.com",
+                projectId: "wetube-6362c",
+                storageBucket: "wetube-6362c.appspot.com",
+                messagingSenderId: "509997407058",
+                appId: "1:509997407058:web:de045f741e8d756bf6f88b"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+        </script>
+
+		<script src="js/join.js"></script>
 	</body>
 </html>
