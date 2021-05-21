@@ -17,6 +17,8 @@ dbBtn1.addEventListener('click', e => {
     document.getElementById('room').value = key;
     document.getElementById('dbBtn1').innerHTML = "Registered" ;
     document.getElementById('dbBtn1').disabled = true;
+    document.getElementById('createBtn').disabled = false;
+
     // flag = true;
     e.preventDefault();
     db.collection('users').add({
