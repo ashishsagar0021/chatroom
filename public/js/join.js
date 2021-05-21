@@ -8,6 +8,7 @@ dbBtn2.addEventListener('click', e => {
     // flag = true;
     document.getElementById('dbBtn2').innerHTML = "Registered" ;
     document.getElementById('dbBtn2').disabled = true;
+    document.getElementById('joinBtn').disabled = false;
     e.preventDefault();
     db.collection('users').add({
         username: user,
